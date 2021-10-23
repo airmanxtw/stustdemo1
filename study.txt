@@ -1,0 +1,8 @@
+*2020/10/25 課程*
+1.npm i vue
+2.vue loader
+3.npx jsconfig.json
+4.new Vue({
+  render: h => h(app)
+}).$mount('#app');
+

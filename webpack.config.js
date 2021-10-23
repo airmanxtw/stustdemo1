@@ -1,8 +1,9 @@
 const path = require('path');
-var WebpackObfuscator = require('webpack-obfuscator');
+
+
 module.exports = {
-  //mode: 'development',
-  mode:"production",
+  mode: 'development',
+  //mode: "production",
   entry: path.join(__dirname, 'src', 'index'),
   //watch: true,
   output: {
@@ -30,15 +31,16 @@ module.exports = {
       //     }]
       //   ]
       // }
-    }]
+    },
+
+    ]
   },
   plugins: [
-    new WebpackObfuscator ({
-        rotateStringArray: true
-    }, ['excluded_bundle_name.js'])
+
   ],
   resolve: {
-    extensions: ['.json', '.js', '.jsx']
+    extensions: ['.json', '.js', '.jsx'],
+
   },
   // devtool: 'source-map',
   // devServer: {
