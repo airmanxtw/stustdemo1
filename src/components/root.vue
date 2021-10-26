@@ -2,7 +2,9 @@
     <div class="b" >
         Hello world {{title}}
         <br/>
-        <counter/>
+        <counter v-slot="{c,ct}">
+            {{c}}-{{ct.length}}
+        </counter>
     </div>
 </template>
 <script>
