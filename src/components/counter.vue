@@ -6,7 +6,7 @@
         <button v-on="{click:hello}">test</button>
         <slot :c="c" :ct="ct">
             <h1>Slot</h1>
-        </slot>
+        </slot>  
     </div>
 </template>
 <script>
@@ -14,13 +14,14 @@ export default {
     data() {
         return {
             c:0,
-            ct:[]
+            ct:[],
+            
         }
     },
     methods: {
         hello(){
             alert('hello');
-        }
-    },
+        },
+    }
 }
 </script>
