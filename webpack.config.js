@@ -25,7 +25,7 @@ module.exports = {
       // options: {
       //   presets: [['@babel/preset-env',{
       //     targets:{
-      //       "ie":"8"
+      //       "ie":"11"
       //     }
       //   }]]
       // }    

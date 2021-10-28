@@ -1,14 +1,13 @@
 <template>
     <div class="b" >
-        Hello world {{title}}
-        <br/>
-        <counter v-slot="{c,ct}">
-            {{c}}-{{ct.length}}
-        </counter>
+        root:{{title}} 
+        <button @click="title='root'">root</button>
+        <news :title="title"></news>
     </div>
 </template>
 <script>
 import counter from "./counter.vue";
+import news from "./news.vue";
 export default {
     data() {
         return {
@@ -23,7 +22,8 @@ export default {
         
     },
     components:{
-      counter
+      counter,
+      news
     }
    
 }
