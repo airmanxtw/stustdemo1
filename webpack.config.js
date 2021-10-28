@@ -13,14 +13,26 @@ module.exports = {
     //chunkFilename: '[name].js'
   },
   module: {
-    rules: [{
-      test: /.jsx?$/,
-      include: [
-        path.resolve(__dirname, 'src')
-      ],
-      exclude: [
-        path.resolve(__dirname, 'node_modules')
-      ],
+    rules: [
+    // {
+    //   test: /.jsx?$/,
+    //   include: [
+    //     path.resolve(__dirname, 'src')
+    //   ],
+    //   exclude: [
+    //     path.resolve(__dirname, 'node_modules')
+    //   ],
+    //   loader: 'babel-loader',
+    //   // options: {
+    //   //   presets: [['@babel/preset-env',{
+    //   //     targets:{
+    //   //       "ie":"11"
+    //   //     }
+    //   //   }]]
+    //   // }    
+    // },
+    {
+      test: /\.js$/,
       loader: 'babel-loader',
       // options: {
       //   presets: [['@babel/preset-env',{
@@ -49,7 +61,7 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   resolve: {
-    extensions: ['.json', '.js', '.jsx'],
+    extensions: ['.json', '.js', '.vue'],
 
   },
   //target: ['web', 'es5']
