@@ -2,8 +2,8 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'development',
-  //mode: "production",
+  //mode: 'development',
+  mode: "production",
   entry: path.join(__dirname, 'src', 'index'),
   //watch: true,
   output: {
@@ -22,15 +22,13 @@ module.exports = {
         path.resolve(__dirname, 'node_modules')
       ],
       loader: 'babel-loader',
-      // query: {
-      //   presets: [
-      //     ["@babel/env", {
-      //       "targets": {
-      //         "browsers": "last 2 chrome versions"
-      //       }
-      //     }]
-      //   ]
-      // }
+      // options: {
+      //   presets: [['@babel/preset-env',{
+      //     targets:{
+      //       "ie":"8"
+      //     }
+      //   }]]
+      // }    
     },
     {
       test: /\.vue$/,
@@ -54,6 +52,7 @@ module.exports = {
     extensions: ['.json', '.js', '.jsx'],
 
   },
+  //target: ['web', 'es5']
   // devtool: 'source-map',
   // devServer: {
   //   contentBase: path.join(__dirname, '/dist/'),
