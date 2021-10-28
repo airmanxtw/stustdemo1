@@ -1,36 +1,11 @@
 <template>
-    <div class="b" >
-        root:{{title}} 
-        <button @click="title='root'">root</button>
-        <news :title="title"></news>
-    </div>
+    <newsSearch/>
 </template>
 <script>
-import counter from "./counter.vue";
-import news from "./news.vue";
+import newsSearch from "./newsSearch.vue";
 export default {
-    data() {
-        return {
-            title:"stust",
-            counter:0
-        }
-    },
-    methods: {
-        
-    },
-    created() {
-        
-    },
-    components:{
-      counter,
-      news
-    }
-   
+   components:{
+       newsSearch
+   } 
 }
 </script>
-<style  scoped>
- .b{
-     background-color: blue;
-     color:white
- }
-</style>
