@@ -1,7 +1,6 @@
 <template>
   <table>
     <mu />
-    <mu :first="6" />
   </table>
 </template>
 <script>
