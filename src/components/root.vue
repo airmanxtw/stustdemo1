@@ -1,11 +1,14 @@
 <template>
-    <newsSearch/>
+  <table>
+    <mu />
+    <mu :first="6" />
+  </table>
 </template>
 <script>
-import newsSearch from "./newsSearch.vue";
+import mu from "./mu";
 export default {
-   components:{
-       newsSearch
-   } 
-}
+  components: {
+    mu,
+  },
+};
 </script>
