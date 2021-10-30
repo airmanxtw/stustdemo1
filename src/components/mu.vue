@@ -1,3 +1,4 @@
+// * 九九乘法表
 <template>
   <tbody>
     <tr v-for="i in [2, 6]">
@@ -7,6 +8,3 @@
     </tr>
   </tbody>
 </template>
-<script>
-export default {};
-</script>
