@@ -1,4 +1,4 @@
-// * 九九乘法表
+// * 九九乘法表 by vue
 <template>
   <tbody>
     <tr v-for="i in [2, 6]">
