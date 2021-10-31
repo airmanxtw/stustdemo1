@@ -1,3 +1,9 @@
+*2021/11/01課程
+1.v-on,v-bind,v-model
+2.v-on縮寫@，v-bind縮寫：
+3.組件props及指令$emit用法
+
+
 *2021/10/27課程*
 1.npm i axios
 2.npm i vue-axios
