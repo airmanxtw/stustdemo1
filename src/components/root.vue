@@ -1,14 +1,24 @@
 <template>
   <div>
-
-    <select-demo/>
+    <mySelect :items="leftItems" />
+    <myDirection />
   </div>
 </template>
 <script>
-import selectDemo from "./selectDemo.vue";
+import mySelect from "./exams/select/mySelect.vue";
+import myDirection from "./exams/select/myDirection.vue";
 export default {
-  components:{
-    selectDemo
-  }
+  data() {
+    return {
+      leftItems: [
+        { text: "apple", value: "apple" },
+        { text: "car", value: "car" },
+      ],
+    };
+  },
+  components: {
+    mySelect,
+    myDirection,
+  },
 };
 </script>
