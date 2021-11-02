@@ -27,6 +27,7 @@ export default {
         { text: "car", value: "car" },
         { text: "dog", value: "dog" },
         { text: "bird", value: "bird" },
+        { text: "phone", value: "phone" },
       ],
       rightItems: [],
       leftSelectItems: [],
