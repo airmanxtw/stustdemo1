@@ -18,7 +18,7 @@
 <script>
 import mySelect from "./exams/select/mySelect.vue";
 import myDirection from "./exams/select/myDirection.vue";
-import {removeItems,moveItems} from "./exams/select/api.js";
+import { removeItems, moveItems } from "./exams/select/api.js";
 export default {
   data() {
     return {
@@ -41,11 +41,11 @@ export default {
       this.rightSelectItems = items;
     },
     rightMove() {
-      this.rightItems=moveItems(this.rightItems,this.leftSelectItems);
+      this.rightItems = moveItems(this.rightItems, this.leftSelectItems);
       this.leftItems = removeItems(this.leftItems, this.leftSelectItems);
     },
     leftMove() {
-      this.leftItems=moveItems(this.leftItems,this.rightSelectItems);
+      this.leftItems = moveItems(this.leftItems, this.rightSelectItems);
       this.rightItems = removeItems(this.rightItems, this.rightSelectItems);
     },
   },
