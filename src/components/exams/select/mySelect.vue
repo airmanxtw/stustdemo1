@@ -40,6 +40,7 @@ export default {
 </script>
 <style scoped>
 .w{
-  width:150px
+  width:150px;
+  height:250
 }
 </style>
