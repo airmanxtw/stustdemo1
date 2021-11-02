@@ -2,7 +2,7 @@
 // TODO props : items 資料,預設為{text:'',value:''}的物件集合，例如[{text:'car',value:'car'}]
 // TODO event : input(selectItems) 已選擇的物件
 <template>
-  <select multiple @input="input($event.target)">
+  <select class="w" multiple @input="input($event.target)">
     <option :key="item[value]" :value="item[value]" v-for="item in items">
       {{ item[text] }}
     </option>
@@ -38,3 +38,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.w{
+  width:150px
+}
+</style>
