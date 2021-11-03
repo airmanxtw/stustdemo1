@@ -1,10 +1,13 @@
 import axios from "axios";
 const opendataUrl = "https://www.ris.gov.tw/rs-opendata/api/v1/datastore/ODRP049/107";
 
+
+
 // * 取得縣市
 let getCity = (func) => {
     axios.get(opendataUrl).then(res => {
         let data = [];
+        return res.data;
         res.data.responseData.forEach(element => {
             let city = element[Object.keys(element)[0]];
             if (data.findIndex(item => item.value == city) == -1) {
