@@ -3,9 +3,6 @@
       <slot>
         {{ value2 }}
       </slot>
-      <slot name="foot">
-          大軍
-      </slot>
   </button>
 </template>
 <script>

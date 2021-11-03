@@ -6,12 +6,14 @@ import VueAxios from "vue-axios";
 
 Vue.use(VueAxios,axios);
 
-new Vue({
+let rootvue={
     el:'#app',
     render(h) {
         return h(root);
     },
-})
+}
+
+new Vue(rootvue);
 
 
 // let total=0;
