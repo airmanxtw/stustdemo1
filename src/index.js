@@ -7,6 +7,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+import home from "./components/home.vue";
 import a1 from "./components/exams/dropdown/anwser.vue";
 import a2 from "./components/news.vue";
 import a3 from "./components/mu.vue";
@@ -14,17 +15,23 @@ import a3 from "./components/mu.vue";
 
 let _routers = [
     {
-        path: "/a",
-        component: a1,
-    },
-    {
-        path: "/b",
-        component: a2,
-    },
-    {
-        path: "/c",
-        component: a3
-    }
+        path:"/",
+        component:home,
+        children:[
+            {
+                path: "/a",
+                component: a1,
+            },
+            {
+                path: "/b",
+                component: a2,
+            },
+            {
+                path: "/c",
+                component: a3
+            }
+        ]
+    } 
 ]
 
 let router = new VueRouter({routes:_routers});
