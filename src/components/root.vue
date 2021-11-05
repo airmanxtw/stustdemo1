@@ -1,33 +1,15 @@
 <template>
   <div>
-    <div :key="m" v-for="m in [1, 4, 7]">
-      <myButton
-        :key="m + n - 1"
-        v-for="n in 3"
-        v-model="b[m + n - 1]"
-        :flag="flag"
-        @changeFlage="changeFlage"
-      >
-      </myButton>
-    </div>
+    <h2>Root</h2>
+    <router-link to="/a">to a</router-link>
+    <router-link to="/b">to b</router-link>
+    <router-link to="/c">to c</router-link>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-import myButton from "./exams/counter/myButton.vue";
+
 export default {
-  data() {
-    return {
-      flag: true,
-      b: [],
-    };
-  },
-  methods: {
-    changeFlage(val) {
-      this.flag = val;
-    },
-  },
-  components: {
-    myButton,
-  },
+
 };
 </script>

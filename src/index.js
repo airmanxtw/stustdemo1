@@ -3,14 +3,52 @@ import Vue from "vue";
 import root from "./components/root.vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import VueRouter from "vue-router";
 
-Vue.use(VueAxios,axios);
+Vue.use(VueRouter);
 
-let rootvue={
-    el:'#app',
+import a1 from "./components/exams/dropdown/anwser.vue";
+import a2 from "./components/exams/select/anwser.vue";
+import a3 from "./components/mu.vue";
+
+let _routers = [
+    {
+        path: "/",
+        component: root,
+        children: [
+            {
+                path: "a",
+                component: a1
+            },
+            {
+                path: "b",
+                component: a2
+            },
+            {
+                path: "c",
+                component: a3
+            }
+        ]
+    }
+]
+
+let router = new VueRouter(_routers);
+
+
+
+
+
+Vue.use(VueAxios, axios);
+
+let rootvue = {
+    router,
+    el: '#app',
     render(h) {
         return h(root);
     },
+    components: {
+        a1, a2, a3
+    }
 }
 
 new Vue(rootvue);
