@@ -19,15 +19,15 @@ let _routers = [
         component:home,
         children:[
             {
-                path: "/a",
+                path: "a",
                 component: a1,
             },
             {
-                path: "/b",
+                path: "b",
                 component: a2,
             },
             {
-                path: "/c",
+                path: "c",
                 component: a3
             }
         ]
