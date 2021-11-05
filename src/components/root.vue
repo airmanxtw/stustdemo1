@@ -4,12 +4,18 @@
     <router-link to="/a">to a</router-link>
     <router-link to="/b">to b</router-link>
     <router-link to="/c">to c</router-link>
+    <button @click='goa'>go a</button>
+    <a href="/a">abc</a>
     <router-view></router-view>
   </div>
 </template>
 <script>
 
 export default {
-
+  methods: {
+    goa(){
+      this.$router.push("/a");
+    }
+  },
 };
 </script>
