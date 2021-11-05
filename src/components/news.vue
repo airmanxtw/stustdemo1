@@ -49,7 +49,6 @@ export default {
   },
   computed: {
     newsCount() {
-      debugger;
       return this.news.length;
     },
   },

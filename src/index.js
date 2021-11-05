@@ -8,34 +8,26 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 import a1 from "./components/exams/dropdown/anwser.vue";
-import a2 from "./components/exams/select/anwser.vue";
+import a2 from "./components/news.vue";
 import a3 from "./components/mu.vue";
+
 
 let _routers = [
     {
-        path: "/",
-        component: root,
-        children: [
-            {
-                path: "a",
-                component: a1
-            },
-            {
-                path: "b",
-                component: a2
-            },
-            {
-                path: "c",
-                component: a3
-            }
-        ]
+        path: "/a",
+        component: a1,
+    },
+    {
+        path: "/b",
+        component: a2,
+    },
+    {
+        path: "/c",
+        component: a3
     }
 ]
 
-let router = new VueRouter(_routers);
-
-
-
+let router = new VueRouter({routes:_routers});
 
 
 Vue.use(VueAxios, axios);
@@ -45,9 +37,6 @@ let rootvue = {
     el: '#app',
     render(h) {
         return h(root);
-    },
-    components: {
-        a1, a2, a3
     }
 }
 
