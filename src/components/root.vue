@@ -7,15 +7,19 @@
     <router-link to="/c">to c</router-link>
     <!-- <button @click='goa'>go a</button> -->
     <router-view></router-view>
+    <addfileds />
   </div>
 </template>
 <script>
-
+import addfileds from "./exams/addFiled/addFiled.vue";
 export default {
   methods: {
-    goa(){
+    goa() {
       this.$router.push("a");
-    }
+    },
+  },
+  components: {
+    addfileds,
   },
 };
 </script>
