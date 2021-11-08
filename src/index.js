@@ -5,9 +5,6 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import VueRouter from "vue-router";
 
-import Vuex from "vuex";
-
-Vue.use(Vuex);
 Vue.use(VueRouter);
 
 import home from "./components/home.vue";
@@ -37,21 +34,6 @@ let _routers = [
     }
 ]
 
-let store = new Vuex.Store({
-    state: {
-        key: "1234567"
-    },
-    getters: {
-        key(state) {
-            return state.key;
-        }
-    },
-    mutations: {
-        setkey(state, val) {
-            this.state.key = val;
-        }
-    }
-})
 
 let router = new VueRouter({ routes: _routers });
 
@@ -60,7 +42,6 @@ Vue.use(VueAxios, axios);
 
 let rootvue = {
     router,
-    store,
     el: '#app',
     render(h) {
         return h(root);
