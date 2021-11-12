@@ -16,7 +16,7 @@
       新增
       </v-btn>
       name:{{name}}
-      <myinput v-model.lazy="name" />
+      <myinput v-model="name" />
 
 
       <!-- <myinput :value="name" @change="(val)=>{name=val}" /> -->
