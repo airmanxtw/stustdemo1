@@ -5,6 +5,11 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import router from "./routerInit.js";
 import Vuex from "vuex";
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify);
+let vuetify=new Vuetify({});
 
 Vue.use(Vuex);
 
@@ -29,6 +34,7 @@ Vue.use(VueAxios, axios);
 
 let rootvue = {
     store,
+    vuetify,
     router,
     el: '#app',
     render(h) {

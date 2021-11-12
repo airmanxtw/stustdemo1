@@ -1,3 +1,10 @@
+*2021/11/12
+1.npm install vuetify
+2.npm install sass@~1.32 sass-loader deepmerge -D
+3.設定webpack.config.js rules
+4.Vue.use(Vuetify);new Vuetify(opts);
+5.cdn 字型
+
 *2021/11/01課程
 1.v-on,v-bind,v-model
 2.v-on縮寫@，v-bind縮寫：
