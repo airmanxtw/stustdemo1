@@ -3,6 +3,11 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            
+        }
+    },
     props:{
         value:{
             type:String,
@@ -11,8 +16,9 @@ export default {
     },
     methods: {
         mychange(event){
-            //this.$emit('change',event);
-            this.$emit("update:value");
+            debugger;
+            this.$emit('change',event);
+            //this.$emit("update:value",event);
         }
     },
 }

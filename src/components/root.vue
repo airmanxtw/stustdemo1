@@ -16,8 +16,11 @@
       新增
       </v-btn>
       name:{{name}}
+      <myinput v-model.lazy="name" />
+
+
       <!-- <myinput :value="name" @change="(val)=>{name=val}" /> -->
-      <myinput :value.sync="name" />
+      <!-- <myinput :value.sync="name" /> -->
     </v-container>
     </v-main>
   </v-app>
