@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ dataurl }}
+    {{1==1 || "this is false"}}
     <v-img :src="dataurl" max-width="500"></v-img>
     <v-file-input
       v-model="file"
