@@ -2,22 +2,23 @@
   <v-app>
     <v-main>
       <v-container>
-        <h2>Root</h2>
+        <h2>Root2</h2>
         <router-link to="/">to home</router-link>
         <router-link to="/a">to a</router-link>
         <router-link to="/b">to b</router-link>
         <router-link to="/c">to c</router-link>
         <router-view></router-view>
-        <aman/>
+        <myImage/>
       </v-container>
     </v-main>
   </v-app>
 </template>
 <script>
-import aman from "./exams/Animation/aman.vue";
+import Image from './exams/imageps/image';
+
 export default {
   components:{
-    aman
+    myImage:Image
   }
 };
 </script>
