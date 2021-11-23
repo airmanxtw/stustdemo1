@@ -8,17 +8,18 @@
         <router-link to="/b">to b</router-link>
         <router-link to="/c">to c</router-link>
         <router-view></router-view>
-        <myImage/>
+        <image-2/>
       </v-container>
     </v-main>
   </v-app>
 </template>
-<script>
-import Image from './exams/imageps/image';
 
+<script>
+import Image2 from './exams/imageps/image2.vue';
 export default {
   components:{
-    myImage:Image
+    Image2
+    
   }
 };
 </script>
