@@ -54,7 +54,7 @@ export default {
     },
   },
   created() {
-    //this.bind();
+    this.bind();
   },
 };
 </script>

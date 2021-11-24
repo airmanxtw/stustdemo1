@@ -1,6 +1,9 @@
 <template>
   <div>
-    <my-form :stud="selectstud"/>
+    <v-dialog v-model="dialog" max-width="500">
+        <my-form :stud="selectstud"/>
+    </v-dialog>
+    
     <v-simple-table>
       <thead>
         <tr>
@@ -35,11 +38,13 @@ export default {
         { studno: "124", studname: "mystic" },
         { studno: "125", studname: "ccsu" },
       ],
-      selectstud:{}
+      selectstud:{},
+      dialog:false
     };
   },
   methods: {
       select(item){
+          this.dialog=true;
           this.selectstud={...item};
       }
   },
