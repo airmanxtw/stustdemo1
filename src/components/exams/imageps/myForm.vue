@@ -7,12 +7,12 @@
           <v-col cols="12">
             <v-text-field
               label="學號"
-              v-model="stud.studno"
-              :rules="[req(stud.studno)]"
+              v-model="wstud.studno"
+              :rules="[req(wstud.studno)]"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
-            <v-text-field label="姓名"></v-text-field>
+            <v-text-field v-model="wstud.studname" label="姓名"></v-text-field>
           </v-col>
         </v-row>
       </v-form>
@@ -25,17 +25,36 @@
 </template>
 <script>
 export default {
+  props: {
+    stud: {
+      type: Object,
+      require: true,
+    },
+  },
   data() {
     return {
       vaild: true,
-      stud: {
-        studno: "",
-        studname: "",
-      },
+      wstud: {},
       req(v) {
         return !!v || "請填寫";
       },
     };
+  },
+  methods: {
+    bind() {
+      this.wstud = { ...this.stud };
+    },
+  },
+  watch: {
+    stud: {
+      handler(newval, oldval) {
+        this.bind();
+      },
+      deep: true,
+    },
+  },
+  created() {
+    //this.bind();
   },
 };
 </script>
