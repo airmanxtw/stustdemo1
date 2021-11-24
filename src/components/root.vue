@@ -8,7 +8,7 @@
         <router-link to="/b">to b</router-link>
         <router-link to="/c">to c</router-link>
         <router-view></router-view>
-        <image-2/>
+        <myForm/>
       </v-container>
     </v-main>
   </v-app>
@@ -16,10 +16,11 @@
 
 <script>
 import Image2 from './exams/imageps/image2.vue';
+import myForm from "./exams/imageps/myForm.vue";
 export default {
   components:{
-    Image2
-    
+    Image2,
+    myForm,
   }
 };
 </script>
