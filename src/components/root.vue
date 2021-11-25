@@ -3,6 +3,7 @@
     <v-main>
       <v-container>
         <h2>Root2</h2>
+        <sign/>
         <router-link to="/">to home</router-link>
         <router-link to="/a">to a</router-link>
         <router-link to="/b">to b</router-link>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import Sign from './exams/dialogDemo/sign.vue';
 import Image2 from './exams/imageps/image2.vue';
 import myForm from "./exams/imageps/myForm.vue";
 import MyList from './exams/imageps/myList.vue';
@@ -22,6 +24,7 @@ export default {
   components:{
     Image2,
     MyList,
+    Sign,
   }
-};
+}
 </script>
