@@ -6,7 +6,17 @@
         <v-card-title>
           <v-img
             src="images/pngtree-cartoon-illustration-fruit-pineapple-image_1241681.jpeg"
-          />
+          >
+            <v-row>
+                <v-col cols="6">
+                <v-img src="images/pngtree-cartoon-illustration-fruit-pineapple-image_1241681.jpeg"/>
+                </v-col>
+                <v-col cols="6">
+                    這是鳳梨
+                </v-col>
+            </v-row>
+
+          </v-img>
         </v-card-title>
         <v-card-text>您己經於{{ new Date().toTimeString() }}完成簽到作業</v-card-text>
         <v-card-actions>
@@ -28,18 +38,11 @@ export default {
     signin() {
       this.dialog = true;
 
-      let a = {money:10}
-      let b = {...a};
 
-      b.money=b.money+10;
-
-      console.log(a.money);
-
-      debugger;
 
       window.setTimeout(() => {
         this.dialog = false;
-      }, 10000);
+      }, 50000);
     },
   },
 };

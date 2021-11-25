@@ -2,6 +2,7 @@
   <v-card>
     <v-card-title class="blue white--text">表單</v-card-title>
     <v-card-text>
+    
       <v-form v-model="vaild">
         <v-row dense>
           <v-col cols="12">
