@@ -27,6 +27,16 @@ export default {
   methods: {
     signin() {
       this.dialog = true;
+
+      let a = {money:10}
+      let b = {...a};
+
+      b.money=b.money+10;
+
+      console.log(a.money);
+
+      debugger;
+
       window.setTimeout(() => {
         this.dialog = false;
       }, 10000);
