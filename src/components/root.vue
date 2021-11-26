@@ -9,7 +9,12 @@
         <router-link to="/b">to b</router-link>
         <router-link to="/c">to c</router-link>
         <router-view></router-view>
-        <my-list/>
+        <v-btn @click="dialog=true"><v-icon>mdi-lead-pencil</v-icon>新增學生</v-btn>
+
+        <v-dialog v-model="dialog" :max-width="400">
+          <stud-form @inserted="dialog=false"></stud-form>
+        </v-dialog>
+        
       </v-container>
     </v-main>
   </v-app>
@@ -17,14 +22,20 @@
 
 <script>
 import Sign from './exams/dialogDemo/sign.vue';
+import StudForm from './exams/form/studForm.vue';
 import Image2 from './exams/imageps/image2.vue';
-import myForm from "./exams/imageps/myForm.vue";
-import MyList from './exams/imageps/myList.vue';
+
 export default {
+  data() {
+    return {
+      dialog:false
+    }
+  },
   components:{
     Image2,
-    MyList,
+
     Sign,
+    StudForm,
   }
 }
 </script>

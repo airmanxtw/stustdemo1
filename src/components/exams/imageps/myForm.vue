@@ -2,15 +2,14 @@
   <v-card>
     <v-card-title class="blue white--text">表單</v-card-title>
     <v-card-text>
-    
       <v-form v-model="vaild">
         <v-row dense>
           <v-col cols="12">
-            {{!wstud.studno}}
+            {{ !wstud.studno }}
             <v-text-field
               label="學號"
               v-model="wstud.studno"
-              :rules="[req(wstud.studno)]"
+              :rules="[req(wstud.studno), max(wstud.studno)]"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -18,7 +17,9 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-alert :value="alert" type="success" transition="fade-transition" dense>{{message}}</v-alert>
+          <v-alert :value="alert" type="success" transition="fade-transition" dense>{{
+            message
+          }}</v-alert>
         </v-row>
       </v-form>
     </v-card-text>
@@ -40,21 +41,24 @@ export default {
     return {
       vaild: true,
       wstud: {},
-      req(v) {
-        return !!v || "請填寫";
-      },
-      alert:false,
-      message:''
+      alert: false,
+      message: "",
     };
   },
   methods: {
     bind() {
       this.wstud = { ...this.stud };
     },
-    save(){
-      this.alert=true;
-      this.message="更新成功"
-    }
+    save() {
+      this.alert = true;
+      this.message = "更新成功";
+    },
+    req(v) {
+      return !!v || "請填寫";
+    },
+    max(v) {
+      return v.length <= 10 || "己超過限制";
+    },
   },
   watch: {
     stud: {

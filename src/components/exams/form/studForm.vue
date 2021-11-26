@@ -1,0 +1,43 @@
+<template>
+  <v-form v-model="valid">
+    <v-card>
+      <v-card-title class="blue white--text">學生資料</v-card-title>
+      <v-card-text>
+        <v-text-field
+          v-model="stud.studno"
+          :rules="[req(stud.studno), max(stud.studno, 8)]"
+          counter="8"
+          label="學號"
+        />
+        <v-text-field v-model="stud.studname" label="姓名" />
+      </v-card-text>
+      <v-card-actions>
+        <v-spacer />
+        <v-btn color="success" @click="save">儲存</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-form>
+</template>
+<script>
+import rules from "../../rules.js";
+export default {
+  mixins: [rules],
+  data() {
+    return {
+      stud: {
+        studno: "",
+        studname: "",
+      },
+      valid: false,
+    };
+  },
+  methods: {
+    save() {
+
+      if (this.valid) {
+        this.$emit("inserted");
+      }
+    },
+  },
+};
+</script>
