@@ -3,7 +3,7 @@
     <v-main>
       <v-container>
         <h2>Root2</h2>
-        <sign/>
+
         <router-link to="/">to home</router-link>
         <router-link to="/a">to a</router-link>
         <router-link to="/b">to b</router-link>
@@ -14,16 +14,13 @@
         <v-dialog v-model="dialog" :max-width="400">
           <stud-form @inserted="dialog=false" :id="id"></stud-form>
         </v-dialog>
-        
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Sign from './exams/dialogDemo/sign.vue';
-import StudForm from './exams/form/studForm.vue';
-import Image2 from './exams/imageps/image2.vue';
+import StudForm from "./exams/form/studForm.vue";
 
 export default {
   data() {
@@ -32,11 +29,8 @@ export default {
       id:1
     }
   },
-  components:{
-    Image2,
-
-    Sign,
+  components: {
     StudForm,
-  }
-}
+  },
+};
 </script>

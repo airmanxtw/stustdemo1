@@ -39,7 +39,7 @@ let rootvue = {
     el: '#app',
     render(h) {
         return h(root);
-    }
+    },
 }
 
 new Vue(rootvue);
