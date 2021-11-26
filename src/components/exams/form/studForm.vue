@@ -22,6 +22,12 @@
 import rules from "../../rules.js";
 export default {
   mixins: [rules],
+  props:{
+      id:{
+          type:Number,
+          default:null
+      } 
+  },
   data() {
     return {
       stud: {
@@ -38,6 +44,14 @@ export default {
         this.$emit("inserted");
       }
     },
+  },
+  watch: {
+      id(newval){
+          debugger;
+      }
+  },
+  created() {
+      debugger;
   },
 };
 </script>

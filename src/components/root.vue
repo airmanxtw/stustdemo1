@@ -9,10 +9,10 @@
         <router-link to="/b">to b</router-link>
         <router-link to="/c">to c</router-link>
         <router-view></router-view>
-        <v-btn @click="dialog=true"><v-icon>mdi-lead-pencil</v-icon>新增學生</v-btn>
+        <v-btn @click="id=id+1;dialog=true;"><v-icon>mdi-lead-pencil</v-icon>新增學生</v-btn>
 
         <v-dialog v-model="dialog" :max-width="400">
-          <stud-form @inserted="dialog=false"></stud-form>
+          <stud-form @inserted="dialog=false" :id="id"></stud-form>
         </v-dialog>
         
       </v-container>
@@ -28,7 +28,8 @@ import Image2 from './exams/imageps/image2.vue';
 export default {
   data() {
     return {
-      dialog:false
+      dialog:false,
+      id:1
     }
   },
   components:{
