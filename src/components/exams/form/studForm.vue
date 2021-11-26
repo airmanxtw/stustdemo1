@@ -1,6 +1,6 @@
 <template>
   <v-form v-model="valid">
-    <v-card>
+    <v-card @keydown.enter="save">
       <v-card-title class="blue white--text">學生資料</v-card-title>
       <v-card-text>
         <v-text-field
@@ -8,6 +8,7 @@
           :rules="[req(stud.studno), max(stud.studno, 8)]"
           counter="8"
           label="學號"
+          autofocus
         />
         <v-text-field v-model="stud.studname" label="姓名" />
       </v-card-text>
@@ -22,11 +23,11 @@
 import rules from "../../rules.js";
 export default {
   mixins: [rules],
-  props:{
-      id:{
-          type:Number,
-          default:null
-      } 
+  props: {
+    id: {
+      type: Number,
+      default: null,
+    },
   },
   data() {
     return {
@@ -39,19 +40,22 @@ export default {
   },
   methods: {
     save() {
-
+      alert("enter");
       if (this.valid) {
         this.$emit("inserted");
       }
     },
+    keydown() {
+      alert("keydown");
+    },
   },
   watch: {
-      id(newval){
-          debugger;
-      }
+    id(newval) {
+      debugger;
+    },
   },
   created() {
-      debugger;
+    debugger;
   },
 };
 </script>
