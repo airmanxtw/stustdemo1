@@ -50,12 +50,21 @@ export default {
     },
   },
   watch: {
-    id(newval) {
-      debugger;
-    },
+    id(newval) {},
   },
   created() {
-    debugger;
+    var websocket;
+
+    websocket = new WebSocket("wss://demo.sewio.net");
+    websocket.onopen = () => {
+      websocket.send(
+        '{"headers":{"X-ApiKey":"171555a8fe71148a165392904"},"method":"subscribe","resource":"/feeds/8"}'
+      );
+    };
+    websocket.onmessage = (res) => {
+      let data = JSON.parse(res.data);
+      debugger;
+    };
   },
 };
 </script>
