@@ -20,6 +20,7 @@
 export default {
   data() {
     return {
+      input1:'',
       injection1: "constructor.constructor('alert(1)')()",
       injection2: "<script>alert(2)" + "</" + "script>",
       injection3: "javascript:alert(0)",
