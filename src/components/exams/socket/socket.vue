@@ -36,5 +36,8 @@ export default {
       this.pos = [...JSON.parse(res.data).body.datastreams];
     };
   },
+  updated() {
+    //console.log(`updated socket.vue ${(new Date()).toLocaleTimeString()}`);
+  },
 };
 </script>

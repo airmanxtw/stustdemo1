@@ -53,18 +53,21 @@ export default {
     id(newval) {},
   },
   created() {
-    var websocket;
+    // var websocket;
 
-    websocket = new WebSocket("wss://demo.sewio.net");
-    websocket.onopen = () => {
-      websocket.send(
-        '{"headers":{"X-ApiKey":"171555a8fe71148a165392904"},"method":"subscribe","resource":"/feeds/8"}'
-      );
-    };
-    websocket.onmessage = (res) => {
-      let data = JSON.parse(res.data);
-      debugger;
-    };
+    // websocket = new WebSocket("wss://demo.sewio.net");
+    // websocket.onopen = () => {
+    //   websocket.send(
+    //     '{"headers":{"X-ApiKey":"171555a8fe71148a165392904"},"method":"subscribe","resource":"/feeds/8"}'
+    //   );
+    // };
+    // websocket.onmessage = (res) => {
+    //   let data = JSON.parse(res.data);
+    //   debugger;
+    // };
+  },
+  updated() {
+    console.log(`updated studForm...${(new Date()).toLocaleTimeString()}`);
   },
 };
 </script>
