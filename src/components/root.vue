@@ -15,7 +15,7 @@
         <h1>key</h1>
 
         <myinput
-          :textProps="{ outlined:true, dense: true }"
+          :textProps="{label:'南臺科技大學', outlined:true, dense: true }"
           :btnProps="{ color: 'primary', large: true }"
         ></myinput>
 
