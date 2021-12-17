@@ -13,6 +13,7 @@
           <td>{{ p.id }}</td>
           <td>{{ p.current_value }}</td>
           <td>{{ p.at }}</td>
+          
         </tr>
       </tbody>
     </v-simple-table>
