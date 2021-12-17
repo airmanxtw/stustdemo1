@@ -11,15 +11,13 @@
         <router-view></router-view>
 
         <!-- <p v-html="constructor.constructor('alert(1)')()"></p> -->
-        <injection-1 />
+        <!-- <injection-1 /> -->
         <h1>key</h1>
 
         <myinput
-          :textProps="{label:'南臺科技大學', outlined:true, dense: true }"
+          :textProps="{ label: '南臺科技大學', outlined: true, dense: true }"
           :btnProps="{ color: 'primary', large: true }"
         ></myinput>
-
-
       </v-container>
     </v-main>
   </v-app>
@@ -27,7 +25,6 @@
 
 <script>
 import StudForm from "./exams/form/studForm.vue";
-import Injection1 from "./exams/injection/injection1.vue";
 import Myinput from "./exams/myinput/myinput.vue";
 import Socket from "./exams/socket/socket.vue";
 
@@ -42,7 +39,6 @@ export default {
   components: {
     StudForm,
     Socket,
-    Injection1,
     Myinput,
   },
 };

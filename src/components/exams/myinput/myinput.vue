@@ -2,6 +2,7 @@
   <div>
     <v-text-field :value="value" v-bind="textProps"></v-text-field>
     <v-btn v-bind="btnProps">確認</v-btn>
+    <h1>{{ s }}</h1>
   </div>
 </template>
 <script>
@@ -11,7 +12,9 @@ export default {
     event: "change",
   },
   data() {
-    return {};
+    return {
+      s: 0,
+    };
   },
   props: {
     value: {
@@ -31,6 +34,17 @@ export default {
     mychange(event) {
       this.$emit("change", event);
     },
+    async test() {
+      let tot = 0;
+      for (let i = 0; i < 9000; i++) tot += i;
+      return tot;
+    },
+  },
+  created() {
+    this.test().then((res) => {
+      console.log(res);
+    });
+    console.log("created done");
   },
 };
 </script>
