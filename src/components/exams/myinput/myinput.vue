@@ -34,15 +34,15 @@ export default {
     mychange(event) {
       this.$emit("change", event);
     },
-    async test() {
+    async testFun() {
       let tot = 0;
       for (let i = 0; i < 9000; i++) tot += i;
       return tot;
     },
   },
   created() {
-    this.test().then((res) => {
-      console.log(res);
+    this.testFun().then((res) => {
+      console.log(`tot=${res}`);
     });
     console.log("created done");
   },
