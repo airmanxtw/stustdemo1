@@ -54,7 +54,6 @@ export default {
   },
   created() {
     // var websocket;
-
     // websocket = new WebSocket("wss://demo.sewio.net");
     // websocket.onopen = () => {
     //   websocket.send(
@@ -67,7 +66,7 @@ export default {
     // };
   },
   updated() {
-    console.log(`updated studForm...${(new Date()).toLocaleTimeString()}`);
+    console.log(`updated studForm...${new Date().toLocaleTimeString()}`);
   },
 };
 </script>
